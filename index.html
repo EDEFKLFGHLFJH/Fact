@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Facturation</title>
+
+    <div class="header">
+    <h1>💼 Facturation</h1>
+</div>
+
+    <!-- CSS -->
+     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!--  PDF (OBLIGATOIRE) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>💼 Facturation</h1>
+
+    <div class="form">
+        <input type="text" id="client" placeholder="Nom du client">
+        <input type="text" id="produit" placeholder="Produit">
+        <input type="number" id="prix" placeholder="Prix">
+        <input type="number" id="quantite" placeholder="Quantité">
+
+        <button onclick="creerFacture()">Créer facture</button>
+        <button onclick="chargerFactures()"> Voir historique</button>
+    </div>
+
+    <!--  zone d'affichage -->
+    <div id="facture" class="facture">
+        <p style="text-align:center; color:gray;">
+            Aucune facture pour le moment...
+        </p>
+    </div>
+
+</div>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
